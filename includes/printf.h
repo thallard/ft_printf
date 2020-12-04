@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 08:30:44 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/04 01:23:35 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 16:39:37 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,11 @@ int		ft_fill_integer_zero_unsigned(t_flags *flags, int nb, int size);
 int		ft_filler_zero_hexa(t_flags *flags, char *res, int size);
 int		ft_filler_width(t_flags *flags, int size, int space, char *str);
 int		ft_filler_minus_string(t_flags *f, int i, int min, char *res);
+int		ft_filler_integer_i_d(t_flags *f, long nb, int spaces, int zeros);
+int		ft_filler_integer_i_d_point_zero(t_flags *f);
+int		ft_print_integer_nozero_no_point(long nb, int spaces);
+int		ft_print_integer_first_cases(t_flags *f, long nb, int spaces, int size);
+int		ft_print_integer_nopoint(t_flags *f);
 
 // Calculs
 char	*ft_calcul_hexa(unsigned long long nb, int maj);

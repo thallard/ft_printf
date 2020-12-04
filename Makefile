@@ -10,7 +10,8 @@ SRCS =	ft_printf.c \
 		\
 		srcs/printers_each_type/ft_print_char.c \
 		srcs/printers_each_type/ft_print_int.c \
-		srcs/printers_each_type/ft_print_hexa.c
+		srcs/printers_each_type/ft_print_hexa.c \
+		srcs/printers_each_type/ft_print_unsigned_int.c
 
 OBJBONUS = ${SRCBONUS:.c=.o}
 

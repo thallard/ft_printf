@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 08:30:18 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/04 14:40:57 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 17:32:58 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,21 +118,21 @@ int		ft_printf(const char *format, ...)
 	return (count);
 }
 
-int main()
-{
+// int main()
+// {
 
-	//char *oui = "oui";
-	int nb = 0;
-	int nb2;
-	// char oui[50] = "bonjour";
-	//  nb = ft_printf("coucou [%c] [%s] [%d] [%i] [%u] [%x] [%X] [%p] \n", '$', "je suis une phrase", 55, 42, 32, 252331995, 2553332, oui);
-	// printf("coucou [%c] [%s] [%d] [%i] [%u] [%x] [%X] [%p] \n", '$', "je suis une phrase", 55, 42, 32, 252331995, 2553332, oui);
-	//return (0);
+// 	//char *oui = "oui";
+// 	int nb = 0;
+// 	int nb2;
+// 	// char oui[50] = "bonjour";
+// 	//  nb = ft_printf("coucou [%c] [%s] [%d] [%i] [%u] [%x] [%X] [%p] \n", '$', "je suis une phrase", 55, 42, 32, 252331995, 2553332, oui);
+// 	// printf("coucou [%c] [%s] [%d] [%i] [%u] [%x] [%X] [%p] \n", '$', "je suis une phrase", 55, 42, 32, 252331995, 2553332, oui);
+// 	//return (0);
 	
-	nb = ft_printf("%12.3s", "Hello");
-	printf("\n");
-	nb2 = printf("%12.3s", "Hello");
+// 	nb = ft_printf("%100.42u", UINT_MAX - 133);
+// 	printf("\n");
+// 	nb2 = printf("%100.42u", UINT_MAX - 133);
 
-	printf("\n");
-	printf("[%d] [%d] \n", nb, nb2);
-}
+// 	printf("\n");
+// 	printf("[%d] [%d] \n", nb, nb2);
+// }
