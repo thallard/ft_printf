@@ -4,14 +4,12 @@ SRCS =	ft_printf.c \
 		srcs/ft_setters.c \
 		srcs/ft_set_flags.c \
 		srcs/ft_utils.c \
-		srcs/ft_printers2.c \
-		srcs/ft_fillers.c \
-		srcs/ft_utils2.c \
 		\
 		srcs/printers_each_type/ft_print_char.c \
 		srcs/printers_each_type/ft_print_int.c \
-		srcs/printers_each_type/ft_print_hexa.c \
-		srcs/printers_each_type/ft_print_unsigned_int.c
+		srcs/printers_each_type/ft_print_hexadecimal.c \
+		srcs/printers_each_type/ft_print_unsigned_int.c \
+		srcs/printers_each_type/ft_print_pointer.c
 
 OBJBONUS = ${SRCBONUS:.c=.o}
 

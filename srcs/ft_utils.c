@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 14:17:11 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/04 00:51:05 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/05 01:52:21 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@ int		ft_get_len(long n)
 	int len;
 
 	len = 0;
-	if(n == 0)
-		return 1;
-	if(n < 0 && len == 0)
+	if (n == 0)
+		return (1);
+	if (n < 0 && len == 0)
 		n = n * (-1);
-	while(n >= 1 && len++ >= 0)
+	while (n >= 1 && len++ >= 0)
 		n /= 10;
 	return (len);
 }
 
-int		ft_strlen(const char *str)
+int		ft_strlen(const char *s)
 {
 	int		i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 		i++;
 	return (i);
 }

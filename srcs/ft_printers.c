@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 08:57:57 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/03 20:27:47 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/05 02:07:08 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ int		ft_putstr_len_rev(char *str)
 long	ft_printnbr_len(long n)
 {
 	long int	temp;
-	temp = n;
-	long res;
+	long		res;
 
+	temp = n;
 	res = ft_get_len(n);
 	if (temp < 0)
 	{

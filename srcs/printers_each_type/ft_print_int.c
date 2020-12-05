@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 14:10:07 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/04 16:55:10 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 17:52:47 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		ft_print_integer_i_d(t_flags *f, va_list args)
 	if (!ft_have_flags(f))
 		return ((nb < 0 ? ft_putchar_len('-') : 0) + ft_printnbr_len(nb));
 	if (f->zero && f->point == -1)
-		return (count + ft_print_integer_nozero_no_point(nb, spaces));
+		return (count + ft_print_integer_zero_no_point(nb, spaces));
 	if (!f->point && nb == 0)
 		return (count + ft_print_integer_nopoint(f));
 	count += ft_filler_integer_i_d(f, nb, spaces, zeros);
@@ -95,7 +95,7 @@ int		ft_print_integer_nopoint(t_flags *f)
 	return (count);
 }
 
-int		ft_print_integer_nozero_no_point(long nb, int spaces)
+int		ft_print_integer_zero_no_point(long nb, int spaces)
 {
 	int		count;
 
