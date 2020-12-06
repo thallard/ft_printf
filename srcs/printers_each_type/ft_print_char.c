@@ -6,11 +6,11 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 13:42:37 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/05 01:36:10 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/06 16:35:42 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/printf.h"
+#include "../../includes/ft_printf.h"
 
 int		ft_print_char(t_flags *f, va_list args)
 {
@@ -45,7 +45,7 @@ int		ft_print_string(t_flags *f, va_list args)
 	whitespace = f->width - ft_strlen(res);
 	if (whitespace >= 0)
 		count += ft_place_spaces(f, res, whitespace);
-	if (!f->width)
+	if (!f->width || f->width < ft_strlen(res))
 		count += ft_putstr_len(res);
 	free(res);
 	return (count);

@@ -6,11 +6,11 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 08:57:57 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/05 02:07:08 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/06 13:38:14 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/printf.h"
+#include "../includes/ft_printf.h"
 
 void	ft_putchar(char c)
 {

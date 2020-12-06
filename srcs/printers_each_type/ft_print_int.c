@@ -6,11 +6,11 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 14:10:07 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/04 17:52:47 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/06 16:41:32 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/printf.h"
+#include "../../includes/ft_printf.h"
 
 int		ft_print_integer_i_d(t_flags *f, va_list args)
 {
@@ -23,6 +23,10 @@ int		ft_print_integer_i_d(t_flags *f, va_list args)
 	count = 0;
 	nb = va_arg(args, int);
 	size = ft_get_len(nb);
+	
+		f->minus = f->width < 0 ? 1 : f->minus;
+	f->width = f->width < 0 ? f->width * -1 : f->width;
+	f->zero = f->minus ? 0 : f->zero;
 	zeros = f->point - size > 0 ? f->point - size : 0;
 	spaces = f->width - (zeros + size) - (nb < 0) > 0 ?
 			f->width - (zeros + size) - (nb < 0) : 0;

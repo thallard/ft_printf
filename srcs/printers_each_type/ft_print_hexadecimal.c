@@ -6,11 +6,11 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 16:30:03 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/05 01:40:19 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/06 16:31:00 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/printf.h"
+#include "../../includes/ft_printf.h"
 
 int		ft_print_integer_hexadecimal(t_flags *f, va_list args, int maj)
 {
@@ -19,6 +19,8 @@ int		ft_print_integer_hexadecimal(t_flags *f, va_list args, int maj)
 
 	count = 0;
 	res = ft_strdup(ft_calcul_hexa(va_arg(args, unsigned int), maj));
+	f->minus = f->width < 0 ? 1 : f->minus;
+	f->width = f->width < 0 ? f->width * -1 : f->width;
 	if (!res)
 		return (0);
 	if (!ft_have_flags(f) && f->width == 0)
@@ -46,12 +48,15 @@ int		ft_print_hexa_first_cases(t_flags *f, char *nb)
 
 	count = 0;
 	size = ft_strlen(nb);
+			f->zero = f->minus ? 0 : f->zero;
 	if (f->zero && f->point == -1)
 		zeros = f->width - size > 0 ? f->width - size : 0;
 	else
 		zeros = f->point - size > 0 ? f->point - size : 0;
 	spaces = f->width - (zeros + size);
 	spaces = spaces > 0 ? spaces : 0;
+		
+
 	if (!f->minus)
 		while (spaces--)
 			count += ft_putchar_len(' ');

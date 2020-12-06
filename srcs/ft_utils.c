@@ -6,11 +6,11 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 14:17:11 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/05 01:52:21 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/06 13:38:25 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/printf.h"
+#include "../includes/ft_printf.h"
 
 int		ft_get_len(long n)
 {

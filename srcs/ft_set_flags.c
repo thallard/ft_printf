@@ -6,11 +6,11 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 10:01:53 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/05 01:57:25 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/06 13:38:17 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/printf.h"
+#include "../includes/ft_printf.h"
 
 int		ft_prepare_print(const char *str, t_flags *f, va_list args)
 {
