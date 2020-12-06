@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 16:30:03 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/06 16:31:00 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/06 16:51:06 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,6 @@ int		ft_print_hexa_first_cases(t_flags *f, char *nb)
 		zeros = f->point - size > 0 ? f->point - size : 0;
 	spaces = f->width - (zeros + size);
 	spaces = spaces > 0 ? spaces : 0;
-		
-
 	if (!f->minus)
 		while (spaces--)
 			count += ft_putchar_len(' ');
