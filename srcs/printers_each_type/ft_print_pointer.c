@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 00:04:23 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/06 13:37:59 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/07 02:24:14 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 int		ft_print_hexa_pointer(t_flags *f, va_list args)
 {
 	int		count;
-	char	*nb;
+	char	nb[50];
 	int		spaces;
 
-	nb = ft_strdup(hexa_pointer(va_arg(args, unsigned long long)));
+	hexa_pointer(va_arg(args, unsigned long long), nb);
 	spaces = f->width - ft_strlen(nb) > 0 ? f->width - ft_strlen(nb) : 0;
 	count = 0;
 	if (!(ft_have_flags(f)) && f->width == 0)
@@ -33,19 +33,22 @@ int		ft_print_hexa_pointer(t_flags *f, va_list args)
 	return (count);
 }
 
-char	*hexa_pointer(unsigned long long nb)
+void	hexa_pointer(unsigned long long nb, char res[50])
 {
 	unsigned long long		nbr;
 	unsigned long long		reste;
 	int						j;
-	char					*res;
 
 	j = 0;
 	nbr = nb;
 	if (nb == ULONG_MAX + 1)
-		return (ft_strdup("0x0"));
-	if (!(res = malloc(sizeof(char) * 25)))
-		return (NULL);
+	{
+		res[0] = '0';
+		res[1] = 'x';
+		res[2] = '0';
+		res[3] = '\0';
+ 		return ;
+	}
 	while (nbr != 0)
 	{
 		reste = nbr % 16;
@@ -59,5 +62,4 @@ char	*hexa_pointer(unsigned long long nb)
 	res[j++] = '0';
 	res[j] = '\0';
 	ft_tolower(res);
-	return (res);
 }

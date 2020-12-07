@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 08:30:44 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/07 01:19:15 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/07 02:01:24 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int				ft_place_spaces(t_flags *f, char *res, int whitespace);
 char			*ft_apply_precision(t_flags *f, char *res, int len);
 
 int				ft_print_hexa_pointer(t_flags *f, va_list a);
-char			*hexa_pointer(unsigned long long nb);
+void			hexa_pointer(unsigned long long nb, char res[50]);
 
 int				ft_is_flag(int c);
 int				ft_is_spec(int c);

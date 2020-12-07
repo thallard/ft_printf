@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 08:30:18 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/07 01:26:54 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/07 02:45:46 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,3 @@ int		ft_printf(const char *format, ...)
 	va_end(arg);
 	return (count);
 }
-
-// int main()
-// {
-// 	int nb, nb2;
-
-// 	// nb = ft_printf("%d\n");
-// 	nb2 = printf("%d", NULL);
-
-// }
