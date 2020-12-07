@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 16:30:03 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/06 16:51:06 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/07 01:31:33 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int		ft_print_integer_hexadecimal(t_flags *f, va_list args, int maj)
 {
-	char	*res;
+	char	res[50];
 	int		count;
 
 	count = 0;
-	res = ft_strdup(ft_calcul_hexa(va_arg(args, unsigned int), maj));
+	ft_calcul_hexa(va_arg(args, unsigned int), maj, res);
 	f->minus = f->width < 0 ? 1 : f->minus;
 	f->width = f->width < 0 ? f->width * -1 : f->width;
-	if (!res)
-		return (0);
+	if (res[0] == '\0')
+		return (ft_putchar_len('0'));
 	if (!ft_have_flags(f) && f->width == 0)
 		count += ft_putstr_len_rev(res);
 	else
@@ -35,7 +35,6 @@ int		ft_print_integer_hexadecimal(t_flags *f, va_list args, int maj)
 		else
 			count = ft_putstr_len_rev(res);
 	}
-	free(res);
 	return (count);
 }
 
@@ -67,19 +66,20 @@ int		ft_print_hexa_first_cases(t_flags *f, char *nb)
 	return (count);
 }
 
-char	*ft_calcul_hexa(unsigned int nb, int maj)
+void	ft_calcul_hexa(unsigned int nb, int maj, char res[50])
 {
 	unsigned int		nbr;
 	unsigned int		reste;
 	int					j;
-	char				*res;
 
 	j = 0;
 	nbr = nb;
 	if (nb == 0)
-		return (ft_strdup("0"));
-	if (!(res = malloc(20)))
-		return (NULL);
+	{
+		res[0] = '0';
+		res[1] = '\0';
+		return ;
+	}
 	while (nbr != 0)
 	{
 		reste = nbr % 16;
@@ -92,5 +92,4 @@ char	*ft_calcul_hexa(unsigned int nb, int maj)
 	res[j] = '\0';
 	if (!maj)
 		ft_tolower(res);
-	return (res);
 }

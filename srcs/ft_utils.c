@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 14:17:11 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/06 13:38:25 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/07 01:08:34 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,27 @@ char	*ft_strdup(char *src)
 	char	*str;
 	long	i;
 
-	if (!(str = malloc(sizeof(char) * (ft_strlen(src) + 1))) || !str)
+	if (!src)
+		return (NULL);
+	if (!(str = malloc(sizeof(char) * (ft_strlen(src) + 1))))
 		return (NULL);
 	i = -1;
 	while (src[++i])
 		str[i] = src[i];
 	str[i] = '\0';
 	return (str);
+}
+
+char *ft_strcpy(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

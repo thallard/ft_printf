@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 08:30:44 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/05 02:15:02 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/07 01:19:15 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int				ft_print_integer_u(t_flags *f, va_list a);
 
 int				ft_print_integer_hexadecimal(t_flags *f, va_list a, int maj);
 int				ft_print_hexa_first_cases(t_flags *f, char *nb);
-char			*ft_calcul_hexa(unsigned int nb, int maj);
+void			ft_calcul_hexa(unsigned int nb, int maj, char *res);
 
 int				ft_print_char(t_flags *f, va_list a);
 int				ft_print_string(t_flags *f, va_list a);
@@ -76,5 +76,6 @@ int				ft_get_len(long n);
 int				ft_strlen(const char *s);
 void			ft_tolower(char *str);
 char			*ft_strdup(char *src);
+char 			*ft_strcpy(char *dest, char *src);
 
 #endif

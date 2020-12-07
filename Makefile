@@ -23,10 +23,10 @@ CC = gcc
 
 RM = rm -f
 
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 %.o: %.c	${HEADER}
-			${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 $(NAME):	${OBJS}
 			ar rc ${NAME} ${OBJS}

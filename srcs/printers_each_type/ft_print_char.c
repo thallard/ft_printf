@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 13:42:37 by thallard          #+#    #+#             */
-/*   Updated: 2020/12/06 16:35:42 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/12/07 01:09:37 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,13 @@ int		ft_print_char(t_flags *f, va_list args)
 int		ft_print_string(t_flags *f, va_list args)
 {
 	int		len;
-	char	*res;
 	int		whitespace;
 	int		count;
+	char	*res;
 
 	count = 0;
-	res = ft_strdup(va_arg(args, char *));
+	if (!(res = ft_strdup(va_arg(args, char *))))
+		return (ft_putstr_len("(null)"));
 	len = ft_strlen(res);
 	if (f->point >= 0)
 		res = ft_apply_precision(f, res, len);
