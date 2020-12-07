@@ -47,7 +47,7 @@ int		ft_print_hexa_first_cases(t_flags *f, char *nb)
 
 	count = 0;
 	size = ft_strlen(nb);
-			f->zero = f->minus ? 0 : f->zero;
+	f->zero = f->minus ? 0 : f->zero;
 	if (f->zero && f->point == -1)
 		zeros = f->width - size > 0 ? f->width - size : 0;
 	else
